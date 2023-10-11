@@ -62,6 +62,7 @@ export const Notes = () => {
             </div>
             <div className="row container my-2 d-flex justify-content-center">
                 <h1>Your Note</h1>
+                {notes.length === 0 && "You don't have notes to dispaly"}
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updatenote={updatenote} note={note} />
                 })}

@@ -8,15 +8,15 @@ export const Noteitem = (props) => {
     const {deletenote} = context;
     return (
         <>
-            <div className="col-md-3 card my-2 mx-2">
+            <div className="col-md-3 card my-2 mx-2 border-warning bg-dark">
                     <div className="card-body">
                         <div className="d-flex align-items-center">
-                        <h5 className="card-title">{note.title}</h5>
-                             <i className="fa-solid fa-trash-can mx-4" onClick={()=>{deletenote(note._id)}}></i>
-                             <i className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updatenote(note)}} ></i>
+                        <h5 className="card-title text-secondary">{note.title}</h5>
+                             <i className="fa-solid text-danger fa-trash-can mx-4" onClick={()=>{deletenote(note._id)}}></i>
+                             <i className="fa-solid text-info fa-pen-to-square mx-2" onClick={()=>{updatenote(note)}} ></i>
                         </div>
-                        <p className="card-text">{note.description}</p>
-                        <p className='card-text'>{note.tag}</p>
+                        <p className="card-text text-white">{note.description}</p>
+                        <p className='card-text text-warning'>{note.tag}</p>
                     </div>
             </div>
         </>
