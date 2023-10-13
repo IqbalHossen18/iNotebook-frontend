@@ -7,13 +7,13 @@ export const About = () => {
   //   }, [])
 
   return (
-     <>
-      <div className="container row my-3 d-flex justify-content-center">
-        <div className="col-md-3">
-          <div className="card text-white bg-success mb-3">
+    <>
+      <div  id="gridabout" className="container my-3 d-flex justify-content-center">
+         
+          <div id="cursor" className="card text-white bg-success mb-3">
             <div className="card-header">Add Note</div>
             <div className="card-body">
-              <h5 className="card-title">Adding Notes Facilities</h5>
+              <h5 id="card-title" className="card-title">Adding Notes Facilities</h5>
               <p className="card-text">
                 Adding notes in a notebook is a straightforward process. To
                 begin, open your preferred note-taking app or physical notebook.
@@ -27,12 +27,11 @@ export const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className="card text-dark bg-info mb-3">
+     
+          <div id="cursor" className="card text-dark bg-info mb-3">
             <div className="card-header">Edit & Update</div>
             <div className="card-body">
-              <h5 className="card-title">Edit Before Updating</h5>
+              <h5 id="card-title" className="card-title">Edit Before Updating</h5>
               <p className="card-text">
                 Editing and updating notes in a notebook is a vital part of the
                 note-taking process. When you need to make changes or additions
@@ -48,12 +47,11 @@ export const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className="card text-white bg-danger mb-3">
+         
+          <div id="cursor" className="card text-white bg-danger mb-3">
             <div className="card-header">Delete</div>
             <div className="card-body">
-              <h5 className="card-title">Be Focus Before Deleting</h5>
+              <h5 id="card-title" className="card-title">Be Focus Before Deleting</h5>
               <p className="card-text">
                 The focus of deletion in a notebook or note-taking app is
                 essential for maintaining organization and decluttering your
@@ -69,12 +67,11 @@ export const About = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className="card text-white bg-secondary mb-3">
+        
+          <div id="cursor" className="card text-white bg-secondary mb-3">
             <div className="card-header">All Notes</div>
             <div className="card-body">
-              <h5 className="card-title">Notes In One Tab / Page</h5>
+              <h5 id="card-title" className="card-title">Notes In One Tab / Page</h5>
               <p className="card-text">
                 The use of tabs or pages in note-taking apps offers an
                 invaluable facility for organizing and structuring notes. Each
@@ -88,11 +85,11 @@ export const About = () => {
                 making note management more productive and visually clear.
               </p>
             </div>
+         
           </div>
-        </div>
       </div>
     </>
-   
+
   );
 };
 

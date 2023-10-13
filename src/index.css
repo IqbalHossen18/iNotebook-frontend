@@ -15,3 +15,36 @@ code {
 i{
   cursor: pointer;
 }
+#cursor{
+  cursor: pointer;
+}
+.card-header{
+  border-bottom:2px solid white;
+}
+#card-title{
+  font-weight:bold;
+}
+/* #columnwise{
+  display:flex;
+  flex-direction: column;
+} */
+.flexrow{
+  display:flex;
+  flex-direction:row;
+}
+.flexcolumn{
+  display:flex;
+  flex-direction:column;
+}
+
+#gridabout{
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+}
+@media screen and (max-width: 1265px) {
+  #gridabout{
+    flex-direction:column-reverse;
+  }
+
+}

@@ -8,8 +8,7 @@ import NoteState from './Context/notes/NoteState'
 import {
   Switch,
   Route} from 'react-router-dom';
-
-function App() {
+export const App=()=>{
   return (
     <>
       <NoteState>
