@@ -7,22 +7,6 @@ import { useRef } from 'react'
 
 export const Notes = () => {
 
-      const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-      useEffect(() => {
-        function handleResize() {
-          setScreenWidth(window.innerWidth);
-        }
-    
-        window.addEventListener('resize', handleResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleResize);
-        };
-      }, []);
-    
-      const columnwise = screenWidth < 1250;
-    
-
     const context = useContext(noteContext)
     const { notes, getnotes, editnote} = context;
 
@@ -81,7 +65,7 @@ export const Notes = () => {
             <div className="container"><h1>Your Note</h1>
               {notes.length > 0 ?`You have ${notesnumber} note`:''}
             </div>
-            <div  style={columnwise ? {display:'flex', flexDirection:'column' } : {}} className={` ${notes.length < 6 ? 'flexrow':'flexcolumn'} container my-2 d-flex justify-content-center"`}>
+            <div className={`container row my-2 d-flex justify-content-center`}>
                 {notes.length === 0 && "You don't have notes to dispaly"}
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updatenote={updatenote} note={note} />
