@@ -5,6 +5,7 @@ import { About } from './components/About';
 import { Account } from './components/Account';
 import { Alert } from './components/Alert';
 import { Home } from './components/Home';
+import { Homepage } from './components/Homepage';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Signup } from './components/Signup';
@@ -22,6 +23,9 @@ export const App=()=>{
         <Alert />
         <div className="container">
           <Switch>
+          <Route exact path="/homepage">
+              <Homepage/>
+            </Route>
             <Route exact path="/">
               <Home />
             </Route>

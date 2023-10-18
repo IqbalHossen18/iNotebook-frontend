@@ -23,11 +23,37 @@ i{
   height:40px;
   border-radius:50%;
   margin-right:20px;
+  background-color:yellow;
 }
 #colortag{
   color:aquamarine;
 }
-
+#boxshadow{
+  box-shadow:2px 2px 30px silver;
+}
+#homepage{
+  height:100vh;
+  margin-top:2px;
+  background-color: #34495E;
+  color:#AEB6BF;
+  padding:100px;
+  margin-bottom:5px;
+  position: relative;
+}
+#profilepic{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+  background-color:rgb(0, 255, 170);
+  color:rgb(108, 108, 108);
+  font-weight:bold;
+  /* text-align:center; */
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  box-shadow: inset 0px 0px 30px rgb(62, 194, 174);
+  text-shadow: 2px 2px silver;
+}
 .card-header{
   border-bottom:2px solid white;
 }
@@ -38,6 +64,18 @@ i{
   display:flex;
   flex-direction: row;
   gap:10px;
+}
+.jumbotron h1{
+  /* font-size:100px; */
+  font-weight:bold;
+}
+.fa-brands{
+  font-size:25px;
+  color:antiquewhite;
+}
+.alignitem{
+  position: absolute;
+  bottom:0;
 }
 
 @media screen and (max-width: 1265px) {

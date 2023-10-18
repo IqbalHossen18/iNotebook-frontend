@@ -5,7 +5,7 @@ import noteContext from '../Context/notes/NoteContext';
 import accountImage from '../account.png'; // No need to go up a level, start with './'
 export const Navbar = () => {
     const context = useContext(noteContext)
-    const { showalert, gotohome } = context;
+    const { showalert, gotohome} = context;
 
     let location = useLocation()
     let history = useHistory()
@@ -21,7 +21,7 @@ export const Navbar = () => {
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">iNotebook</Link>
+                <Link className="navbar-brand" to="/homepage">iNotebook</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -35,12 +35,12 @@ export const Navbar = () => {
                         </li>
                     </ul>
                      <div>
-                     <Link className=" mx-1" to="/img" role="button"><img onClick={gotohome} id="userInfo" src={accountImage} alt="Account" /></Link>
+                     <Link className=" mx-1 my-2" to="/img" role="button"><img onClick={gotohome} id="userInfo" src={accountImage} alt="Account" /></Link>
                      </div>
                     {!localStorage.getItem('token') ? <form className="d-flex">
                         <Link className="btn btn-info mx-1" to="/login" role="button">Login</Link>
                         <Link className="btn btn-info mx-1" to="/signup" role="button">Signup</Link>
-                    </form> : <button onClick={handellogout} className='btn btn-primary' role="button">Logout</button>}
+                    </form> : <button onClick={handellogout} className='btn btn-primary'>Logout</button>}
                 </div>
             </div>
         </nav>
