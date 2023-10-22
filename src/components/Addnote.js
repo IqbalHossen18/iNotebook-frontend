@@ -12,8 +12,8 @@ export const Addnote = () => {
     const handleClick = (e) => {
         e.preventDefault()
             addnote(note.title, note.description, note.tag)
-            showalert("Your note have been added" , "success")
              setnote({title:'', description:'', tag:''})
+             showalert("Your note have been added" , "success")
     }
     return (
         <>
@@ -22,7 +22,7 @@ export const Addnote = () => {
                 <form className="my-3">
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Title</label>
-                    <input type="text" className="form-control" id="title" name="title"  aria-describedby="emailHelp" value={note.title}  onChange={onChange} /> 
+                    <input type="text" className="form-control" id="title" name="title" maxLength={15} aria-describedby="emailHelp" value={note.title}  onChange={onChange} /> 
                 </div>
                 <div className="mb-3">
                     <label htmlFor="description" className="form-label">Description</label>
@@ -30,7 +30,7 @@ export const Addnote = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="tag" className="form-label">Tag</label>
-                    <input type="text" className="form-control" id="tag"  name="tag"  value={note.tag} onChange={onChange} />
+                    <input type="text" className="form-control" id="tag"  name="tag" maxLength={15} value={note.tag} onChange={onChange} />
                 </div>
                
                 <button type="submit" disabled={note.title.length < 3 ||  note.description.length <9} className="btn btn-primary" onClick={handleClick}>Add Note</button>

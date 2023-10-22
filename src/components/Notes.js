@@ -51,7 +51,7 @@ export const Notes = () => {
                             <h3>Edit Note</h3>
                             <div className="form-group my-2">
                                 <label htmlFor="etitle">Title</label>
-                                <input type="text" className="form-control" id="etitle" name="etitle"  value={note.etitle} aria-describedby="emailHelp" onChange={Onchange} />
+                                <input type="text" className="form-control" id="etitle" name="etitle" maxLength={15}  value={note.etitle} aria-describedby="emailHelp" onChange={Onchange} />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="edescription">Description</label>
@@ -59,7 +59,7 @@ export const Notes = () => {
                             </div>
                             <div className="form-group my-2">
                                 <label htmlFor="etag">Tag</label>
-                                <input type="text" className="form-control" id="etag" name="etag" value={note.etag} aria-describedby="emailHelp" onChange={Onchange} />
+                                <input type="text" className="form-control" id="etag" name="etag" maxLength={15} value={note.etag} aria-describedby="emailHelp" onChange={Onchange} />
                             </div>
                         </form>
                         <div className="modal-footer">

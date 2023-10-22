@@ -13,25 +13,33 @@ export const Signup = () => {
 
   const handlesubmit = async(e)=>{
     e.preventDefault()
-    const {name , email, password} = credintials;
-    const response = await fetch('http://localhost:5000/api/auth/createuser', {
-      method:'POST', 
-      headers:{
-        'Content-Type': "application/json"
-      },
-      body:JSON.stringify({name, email, password})
-    })
-    const json = await response.json()
-      console.log(json)
-     if(json.success){
-      localStorage.setItem('token', json.token)
-   
-      history.push('/')
-      showalert('Sign In','success')
-     }else{
-      showalert('Invalid credintails','info')
-     }
+    
+    const {name , email, password , cpassword} = credintials;
+    if(password !== cpassword){
+      showalert('password does not matched', 'warning')
+      return
+    }
 
+      const response = await fetch('http://localhost:5000/api/auth/createuser', {
+        method:'POST', 
+        headers:{
+          'Content-Type': "application/json"
+        },
+        body:JSON.stringify({name, email, password , cpassword})
+      })
+      const json = await response.json()
+        // console.log(json)
+       if(json.success){
+        localStorage.setItem('token', json.token)
+     
+        history.push('/')
+        showalert('Sign In','success')
+       }else{
+        showalert('Invalid credintails','info')
+       }
+  
+
+  
   }
 
 
@@ -40,6 +48,8 @@ export const Signup = () => {
     e.preventDefault()
     setcredintials({...credintials, [e.target.name] : e.target.value})
   }
+
+
   return (
     <>
     <form onSubmit={handlesubmit} className='container mt-5'>

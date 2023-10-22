@@ -32,11 +32,12 @@ i{
   box-shadow:2px 2px 30px silver;
 }
 #homepage{
-  height:100vh;
+  /* height:100vh; */
   margin-top:2px;
   background-color: #34495E;
   color:#AEB6BF;
-  padding:100px;
+  padding:25px;
+  height: 100vh;
   margin-bottom:5px;
   position: relative;
 }
